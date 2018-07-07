@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.context.annotation.Bean;
 
-import com.journal.domain.Journal;
+import com.journal.domain.JournalEntry;
 import com.journal.repository.JournalRepository;
 
 @SpringBootApplication
@@ -16,12 +16,12 @@ public class JournalApplication {
   @Bean
   InitializingBean saveData(JournalRepository repo) {
     return () -> {
-      repo.save(new Journal("Get to know Spring Boot",
-        "Today I will learn Spring Boot", "07/03/2018"));
-      repo.save(new Journal("Give money away",
-        "Invest in Bitcoin", "08/02/2018"));
-      repo.save(new Journal("Read East of Eden",
-        "I hear it's a great book", "08/04/2018"));
+      repo.save(new JournalEntry("Get to know Spring Boot",
+        "Today I will learn Spring Boot", "07-03-2018"));
+      repo.save(new JournalEntry("Give money away",
+        "Invest in Bitcoin", "08-02-2018"));
+      repo.save(new JournalEntry("Read East of Eden",
+        "I hear it's a great book", "08-04-2018"));
     };
   }
 

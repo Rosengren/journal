@@ -9,7 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.journal.domain.Journal;
+import com.journal.domain.JournalEntry;
 import com.journal.repository.JournalRepository;
 
 @Controller
@@ -22,7 +22,7 @@ public class JournalController {
     value = "/journal",
     produces = { MediaType.APPLICATION_JSON_UTF8_VALUE }
   )
-  public @ResponseBody List<Journal> getJournal() {
+  public @ResponseBody List<JournalEntry> getJournal() {
     return repo.findAll();
   }
 
