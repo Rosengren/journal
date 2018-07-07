@@ -12,12 +12,16 @@ import com.journal.repository.JournalRepository;
 @SpringBootApplication
 // @EnableJpaRepositories(basePackages = {"com.journal.repository"})
 public class JournalApplication {
-  
+
   @Bean
   InitializingBean saveData(JournalRepository repo) {
     return () -> {
       repo.save(new Journal("Get to know Spring Boot",
         "Today I will learn Spring Boot", "07/03/2018"));
+      repo.save(new Journal("Give money away",
+        "Invest in Bitcoin", "08/02/2018"));
+      repo.save(new Journal("Read East of Eden",
+        "I hear it's a great book", "08/04/2018"));
     };
   }
 
