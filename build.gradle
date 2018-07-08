@@ -29,6 +29,6 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-rest')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('mysql:mysql-connector-java')
+	compile('mysql:mysql-connector-java:8.0.11')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

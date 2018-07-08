@@ -17,11 +17,11 @@ public class JournalApplication {
   InitializingBean saveData(JournalRepository repo) {
     return () -> {
       repo.save(new JournalEntry("Get to know Spring Boot",
-        "Today I will learn Spring Boot", "07-03-2018"));
+        "Today I will learn Spring Boot", "2018-07-03"));
       repo.save(new JournalEntry("Give money away",
-        "Invest in Bitcoin", "08-02-2018"));
+        "Invest in Bitcoin", "2018-08-02"));
       repo.save(new JournalEntry("Read East of Eden",
-        "I hear it's a great book", "08-04-2018"));
+        "I hear it's a great book", "2018-08-04"));
     };
   }
 
