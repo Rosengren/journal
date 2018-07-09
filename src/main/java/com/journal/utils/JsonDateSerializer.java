@@ -1,4 +1,4 @@
-package com.journal.spring.utils;
+package com.journal.utils;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
