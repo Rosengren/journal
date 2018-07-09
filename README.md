@@ -48,3 +48,13 @@ The following SQL commands were run to setup the database:
       PRIMARY KEY (id)
     );
 ```
+
+### Notes
+
+Once the server is up and running, a list of search options can be found at the following endpoint:
+
+    localhost:8080/api/journal/search
+
+Use the HAL browser to inspect REST APIs at the following endpoint:
+
+    localhost:8080/api/browser
