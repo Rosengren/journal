@@ -13,14 +13,7 @@ public class JournalApplication {
 
   @Bean
   InitializingBean saveData(JournalRepository repo) {
-    return () -> {
-      repo.save(new JournalEntry("Get to know Spring Boot",
-        "Today I will learn Spring Boot", "2018-07-03"));
-      repo.save(new JournalEntry("Give money away",
-        "Invest in Bitcoin", "2018-08-02"));
-      repo.save(new JournalEntry("Read East of Eden",
-        "I hear it's a great book", "2018-08-04"));
-    };
+    return () -> {};
   }
 
   public static void main(String[] args) {

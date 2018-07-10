@@ -37,17 +37,7 @@ The following SQL commands were run to setup the database:
 
 #### Create SQL Table
 
-```sql
-    CREATE DATABASE journal;
-    USE journal;
-    CREATE TABLE entry (
-      id BIGINT NOT NULL auto_increment,
-      title VARCHAR(1000),
-      created VARCHAR(1000),
-      summary VARCHAR(2000),
-      PRIMARY KEY (id)
-    );
-```
+The application should automatically run the SQL data in the schema and data sql files. These are located in the resources folder. Make sure the mysql server is running when launching the application.
 
 ### Notes
 
@@ -56,12 +46,14 @@ When starting up the server, you will need to enter a username and password to a
 1. The InMemorySecurityConfiguration class defines usernames and passwords.
 
 2. If the above does not have any users, then the user name and password can be found in the application properties file:
-* security.user.name
-* security.user.password
+
+    * security.user.name
+    * security.user.password
 
 3. If the above are not specified, then the defaults are the following:
-* The user name is 'user'.
-* The password is an auto-generated GUID that is printed in the terminal when the server is starting up.
+
+    * The user name is 'user'.
+    * The password is an auto-generated GUID that is printed in the terminal when the server is starting up.
 
 Calls to the server using curl can be done as follows:
 
