@@ -66,3 +66,8 @@ A list of search options can be found at the following endpoint:
 Use the HAL browser to inspect REST APIs at the following endpoint:
 
     localhost:8080/api/browser
+
+
+To generate a new keystore.jks file, run the following command in the project root folder:
+
+    keytool -genkey -alias tomcat -keyalg RSA -keystore src/main/resources/keystore.jks

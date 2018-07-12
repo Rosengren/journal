@@ -1,19 +1,16 @@
 package com.journal;
 
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-
-import com.journal.domain.JournalEntry;
-import com.journal.repository.JournalRepository;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.web.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class JournalApplication {
+public class JournalApplication extends SpringBootServletInitializer {
 
-  @Bean
-  InitializingBean saveData(JournalRepository repo) {
-    return () -> {};
+  @Override
+  protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+    return application.sources(SpringBootApplication.class);
   }
 
   public static void main(String[] args) {

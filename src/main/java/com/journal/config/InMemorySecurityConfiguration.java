@@ -17,7 +17,7 @@ public class InMemorySecurityConfiguration {
         .roles("USER")
       .and()
         .withUser("admin")
-        .password("pass")
+        .password("password")
         .roles("USER", "ADMIN");
   }
 }
