@@ -1,5 +1,9 @@
 # Journal
 
+#### Create and manage your journal entries!
+
+![alt text](docs/journal.png "Journal Screenshot")
+
 #### Create Project Command
     spring init --boot-version=1.3.1.RELEASE --build=gradle --groupId=com --name=Journal
 
@@ -61,13 +65,17 @@ Calls to the server using curl can be done as follows:
 
 A list of search options can be found at the following endpoint:
 
-    localhost:8080/api/journal/search
+    https://localhost:8443/api/journal/search
 
 Use the HAL browser to inspect REST APIs at the following endpoint:
 
-    localhost:8080/api/browser
+    https://localhost:8443/api/browser
 
 
 To generate a new keystore.jks file, run the following command in the project root folder:
 
     keytool -genkey -alias tomcat -keyalg RSA -keystore src/main/resources/keystore.jks
+
+To execute the WAR file, after building the project, run:
+
+    java -jar build/libs/journal-0.0.1-SNAPSHOT.war
